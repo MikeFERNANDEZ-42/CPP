@@ -1,15 +1,15 @@
 NAME		= annuaire
-SRCSC		= main.cpp Contacts.class.cpp
+SRCSC		= main.cpp Contacts.class.cpp ContactList.cpp
 SRCSH		= 
 OBJS		= $(SRCSC:%.cpp=%.o)
 LIBS 		= 
 FLAGS		= -Wall -Wextra -Werror
-CC			= clang++
+CC			= g++
 
 all:		${NAME}
 
 .c.o: ${OBJS}
-	@clang++ ${FLAGS} -cpp $< -o ${<:.cpp=.o}
+	@g++ ${FLAGS} -cpp $< -o ${<:.cpp=.o}
 
 $(NAME):	${OBJS} ${SRCSH}
 			@${CC} ${FLAGS} ${OBJS} ${LIBS} -o ${NAME}

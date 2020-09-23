@@ -13,25 +13,36 @@
 #include <iostream>
 #include "Contacts.class.hpp"
 
-Contacts::Contacts( void ) {
-
-	//std::cout << "Constructor called" << std::endl;
-	return ;
+Contacts::Contacts()
+: m_fistName( "no value" )
+, m_lastName( "no value" )
+, m_nickname( "no value" )
+, m_login( "no value" )
+, m_postalAddr( "no value" )
+, m_mail( "no value" )
+, m_phone( "no value" )
+, m_birthday( "no value" )
+, m_meal( "no value" )
+, m_underwear( "no value" )
+, m_secret( "no value" )
+{
 }
 
-Contacts::~Contacts( void ) {
-
-	//std::cout << "Destructor called" << std::endl;
-	return ;
+Contacts::Contacts( std::string pFN, std::string pLN, std::string pNick, std::string pLog, std::string pAddr, std::string pMail, std::string pPhone, std::string pBirth, std::string pMeal, std::string pWear,	std::string pSecret )
+: m_fistName( pFN )
+, m_lastName( pLN )
+, m_nickname( pNick )
+, m_login( pLog )
+, m_postalAddr( pAddr )
+, m_mail( pMail )
+, m_phone( pPhone )
+, m_birthday( pBirth )
+, m_meal( pMeal )
+, m_underwear( pWear )
+, m_secret( pSecret )
+{
 }
 
-std::string	Contacts::getInfos(int i) const {
-
-	return (this->_infos[i]);
-};
-
-void	Contacts::setInfos(std::string infos, int i){
-
-	this->_infos[i] = infos;
-	return ;
-};
+Contacts::~Contacts() 
+{
+}

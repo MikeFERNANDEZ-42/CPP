@@ -10,36 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTS_CLASS_HPP
-#define CONTACTS_CLASS_HPP
+#ifndef CONTACTLIST_HPP
+# define CONTACTLIST_HPP
 
-#include <iostream>
+#include "Contacts.class.hpp"
 
-class Contacts 
+class ContactList 
 {
-
 public:
-	Contacts();
-	Contacts( 	std::string pFN, std::string pLN,
-				std::string pNick, std::string pLog, 
-				std::string pAddr, std::string pMail,
-				std::string pPhone, std::string pBirth,
-				std::string pMeal, std::string pWear,
-				std::string pSecret );
-	~Contacts() ;
-
+	ContactList();
+	~ContactList();
+	
+	bool AddNewContact();
+	void printContantList();
+	
 private:
-	std::string m_fistName;
-	std::string m_lastName;
-	std::string m_nickname;
-	std::string m_login;
-	std::string m_postalAddr;
-	std::string m_mail;
-	std::string m_phone;
-	std::string m_birthday;
-	std::string m_meal;
-	std::string m_underwear;
-	std::string m_secret;
+	Contacts*	m_ListContact[8];
+	int			m_NbContact;
 };
 
 #endif
+
