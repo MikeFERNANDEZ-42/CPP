@@ -1,5 +1,5 @@
-NAME		= annuaire
-SRCSC		= main.cpp Contacts.cpp
+NAME		= Weapon
+SRCSC		= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 SRCSH		= 
 OBJS		= $(SRCSC:%.cpp=%.o)
 LIBS 		= 
@@ -9,7 +9,7 @@ CC			= clang++
 all:		${NAME}
 
 .c.o: ${OBJS}
-	@clang++ ${FLAGS} -cpp $< -o ${<:.cpp=.o}
+	@clang++ -g -fsanitize=address ${FLAGS} -cpp $< -o ${<:.cpp=.o}
 
 $(NAME):	${OBJS} ${SRCSH}
 			@${CC} ${FLAGS} ${OBJS} ${LIBS} -o ${NAME}
@@ -20,7 +20,7 @@ $(NAME):	${OBJS} ${SRCSH}
 
 run:
 			@make
-			@./annuaire
+			@./Zombie
 
 clean:
 			@rm -f ${OBJS}

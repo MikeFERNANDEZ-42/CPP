@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.class.hpp                                 :+:      :+:    :+:   */
+/*   Contacts.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/23 16:50:50 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 17:47:05 by user42           ###   ########.fr       */
+/*   Created: 2020/09/22 13:30:18 by user42            #+#    #+#             */
+/*   Updated: 2020/09/23 16:51:39 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTS_H
-# define CONTACTS_H
+#include "Contacts.h"
 
-# include <iostream>
+Contacts::Contacts( void ) {
 
-class	Contacts {
+	//std::cout << "Constructor called" << std::endl;
+	return ;
+}
 
-public:
+Contacts::~Contacts( void ) {
 
-	Contacts(void);
-	~Contacts(void) ;
+	//std::cout << "Destructor called" << std::endl;
+	return ;
+}
 
-	std::string		getInfos(int i) const;
-	void			setInfos(std::string infos, int i);
+std::string	Contacts::getInfos(int i) const {
 
-private:
-
-	std::string _infos[11];
-
+	return (this->_infos[i]);
 };
 
-#endif
+void	Contacts::setInfos(std::string infos, int i){
+
+	this->_infos[i] = infos;
+	return ;
+};

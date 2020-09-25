@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.class.hpp                                 :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/23 16:50:50 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 17:47:05 by user42           ###   ########.fr       */
+/*   Created: 2020/09/24 11:53:50 by user42            #+#    #+#             */
+/*   Updated: 2020/09/24 16:07:44 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTS_H
-# define CONTACTS_H
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-# include <iostream>
+#include <iostream>
 
-class	Contacts {
+class Zombie 
+{
 
-public:
+	public:
+	
+		Zombie();
+		Zombie(std::string pName);
+		~Zombie();
 
-	Contacts(void);
-	~Contacts(void) ;
+		void	setType(std::string pType);
+		void	advert() const;
+		
+	
+	private:
 
-	std::string		getInfos(int i) const;
-	void			setInfos(std::string infos, int i);
-
-private:
-
-	std::string _infos[11];
-
+		std::string _name;
+		std::string	_type;
 };
 
 #endif

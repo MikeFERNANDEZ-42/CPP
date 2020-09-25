@@ -1,5 +1,5 @@
-NAME		= annuaire
-SRCSC		= main.cpp Contacts.cpp
+NAME		= Human
+SRCSC		= main.cpp Brain.cpp Human.cpp 
 SRCSH		= 
 OBJS		= $(SRCSC:%.cpp=%.o)
 LIBS 		= 
@@ -20,7 +20,7 @@ $(NAME):	${OBJS} ${SRCSH}
 
 run:
 			@make
-			@./annuaire
+			@./Zombie
 
 clean:
 			@rm -f ${OBJS}

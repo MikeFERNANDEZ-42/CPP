@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.class.hpp                                 :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/23 16:50:50 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 17:47:05 by user42           ###   ########.fr       */
+/*   Created: 2020/09/24 18:41:50 by user42            #+#    #+#             */
+/*   Updated: 2020/09/24 20:24:07 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTS_H
-# define CONTACTS_H
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include <iostream>
+#include <iostream>
 
-class	Contacts {
+class	Brain {
 
 public:
 
-	Contacts(void);
-	~Contacts(void) ;
+	Brain();
+	~Brain();
 
-	std::string		getInfos(int i) const;
-	void			setInfos(std::string infos, int i);
+	void	*identify();
 
-private:
-
-	std::string _infos[11];
+private :
 
 };
 
-#endif
+#endif 

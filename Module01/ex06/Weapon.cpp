@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.class.hpp                                 :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/23 16:50:50 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 17:47:05 by user42           ###   ########.fr       */
+/*   Created: 2020/09/24 22:30:18 by user42            #+#    #+#             */
+/*   Updated: 2020/09/25 11:59:06 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTS_H
-# define CONTACTS_H
+#include "Weapon.hpp"
 
-# include <iostream>
 
-class	Contacts {
+Weapon::Weapon()
+{
+}
 
-public:
+Weapon::Weapon(std::string pweapon) : _type(pweapon)
+{
+}
 
-	Contacts(void);
-	~Contacts(void) ;
+Weapon::~Weapon()
+{
+}
 
-	std::string		getInfos(int i) const;
-	void			setInfos(std::string infos, int i);
+std::string	Weapon::getType()
+{
+	std::string &ref = this->_type; // const
+	return (ref);
+}
 
-private:
-
-	std::string _infos[11];
-
-};
-
-#endif
+void	Weapon::setType(std::string ptype)
+{
+	this->_type = ptype;
+}

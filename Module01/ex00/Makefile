@@ -1,5 +1,5 @@
-NAME		= annuaire
-SRCSC		= main.cpp Contacts.cpp
+NAME		= pony
+SRCSC		= main.cpp Pony.cpp
 SRCSH		= 
 OBJS		= $(SRCSC:%.cpp=%.o)
 LIBS 		= 
@@ -20,7 +20,7 @@ $(NAME):	${OBJS} ${SRCSH}
 
 run:
 			@make
-			@./annuaire
+			@./pony
 
 clean:
 			@rm -f ${OBJS}

@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.class.hpp                                 :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/23 16:50:50 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 17:47:05 by user42           ###   ########.fr       */
+/*   Created: 2020/09/24 11:53:56 by user42            #+#    #+#             */
+/*   Updated: 2020/09/24 16:09:05 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTS_H
-# define CONTACTS_H
+#include "Zombie.hpp"
 
-# include <iostream>
+Zombie::Zombie()
+{
+}
 
-class	Contacts {
+Zombie::Zombie(std::string pName) : _name(pName)
+{
+}
 
-public:
+Zombie::~Zombie()
+{
+	std::cout << "Zombie has been destroyed !" << std::endl;
+}
 
-	Contacts(void);
-	~Contacts(void) ;
+void	Zombie::advert() const
+{
+	std::cout << "<" << this->_name << " (" << this->_type
+	<< ")> Braiiiiiiinnnssss ..." << std::endl;
+}
 
-	std::string		getInfos(int i) const;
-	void			setInfos(std::string infos, int i);
-
-private:
-
-	std::string _infos[11];
-
-};
-
-#endif
+void	Zombie::setType(std::string pType)
+{
+	this->_type = pType;
+	advert();
+}

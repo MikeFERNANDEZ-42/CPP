@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.class.hpp                                 :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/23 16:50:50 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 17:47:05 by user42           ###   ########.fr       */
+/*   Created: 2020/09/24 22:26:48 by user42            #+#    #+#             */
+/*   Updated: 2020/09/25 12:50:54 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTS_H
-# define CONTACTS_H
+#include "Weapon.hpp"
 
-# include <iostream>
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-class	Contacts {
+class	HumanB {
 
 public:
 
-	Contacts(void);
-	~Contacts(void) ;
+	HumanB(std::string pname);
+	~HumanB();
 
-	std::string		getInfos(int i) const;
-	void			setInfos(std::string infos, int i);
+	void	attack();
+	void	setWeapon(Weapon &Pweapon);
 
-private:
+private :
 
-	std::string _infos[11];
-
+	std::string _name;
+	Weapon *_weaponType;
 };
 
 #endif

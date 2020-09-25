@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.class.hpp                                 :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/21 23:40:11 by user42            #+#    #+#             */
-/*   Updated: 2020/09/22 18:18:15 by user42           ###   ########.fr       */
+/*   Created: 2020/09/24 22:28:06 by user42            #+#    #+#             */
+/*   Updated: 2020/09/25 12:41:05 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACTLIST_HPP
-# define CONTACTLIST_HPP
+#include "Weapon.hpp"
 
-#include "Contacts.class.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-class ContactList 
-{
+class	HumanA {
+
 public:
-	ContactList();
-	~ContactList();
-	
-	bool AddNewContact();
-	void printContantList();
-	
-private:
-	Contacts*	m_ListContact[8];
-	int			m_NbContact;
+
+	HumanA(std::string pname, Weapon &_weaponType);
+	~HumanA();
+
+	void	attack();
+	void	setWeapon(Weapon pWeapon);
+
+private :
+
+	std::string _name; 
+	Weapon &_weaponType;
 };
 
 #endif
-
