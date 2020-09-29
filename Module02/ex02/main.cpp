@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/21 15:16:06 by user42            #+#    #+#             */
-/*   Updated: 2020/09/28 11:35:55 by user42           ###   ########.fr       */
+/*   Created: 2020/09/26 13:15:02 by user42            #+#    #+#             */
+/*   Updated: 2020/09/27 22:27:54 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Fixed.hpp"
 
-int main(int argc, char **argv)
+int
+main(void)
 {
-	int i;
-	int j;
+	Fixed	a;
+	Fixed const	b(Fixed(5.05f) * Fixed(2));
 
-	i = 0;
-	if (argc == 1)
-		std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
-	{
-		while (argv[++i])
-		{
-			j = -1;
-			while(argv[i][++j])
-			{
-				argv[i][j] = toupper(argv[i][j]);
-				std::cout<< argv[i][j];
-			}
-		}
-		std::cout<<std::endl;
-	}
-	return (0);
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+
+	std::cout << b << std::endl;
+
+	std::cout << Fixed::max(a, b) << std::endl;
+
+	return 0;
 }

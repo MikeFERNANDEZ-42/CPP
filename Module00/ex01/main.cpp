@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 15:29:19 by user42            #+#    #+#             */
-/*   Updated: 2020/09/23 16:51:47 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/29 13:04:52 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ft_print_light (Contacts	instance, int nb_contacts)
 			display[9] = '.';
 		std::cout << display << "|";
 	}
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl;
 }
 
 void	ft_print_contact(Contacts instance)

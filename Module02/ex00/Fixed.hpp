@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/21 15:16:06 by user42            #+#    #+#             */
-/*   Updated: 2020/09/28 11:35:55 by user42           ###   ########.fr       */
+/*   Created: 2020/09/26 15:35:22 by user42            #+#    #+#             */
+/*   Updated: 2020/09/27 11:01:26 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-int main(int argc, char **argv)
-{
-	int i;
-	int j;
+# include <iostream>
 
-	i = 0;
-	if (argc == 1)
-		std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
-	{
-		while (argv[++i])
-		{
-			j = -1;
-			while(argv[i][++j])
-			{
-				argv[i][j] = toupper(argv[i][j]);
-				std::cout<< argv[i][j];
-			}
-		}
-		std::cout<<std::endl;
-	}
-	return (0);
-}
+class	Fixed {
+
+public:
+
+	Fixed( void );
+	Fixed( Fixed const & src );
+	~Fixed( void );
+
+	int		getRawBits( void ) const;
+	void	setRawBits( int const raw);
+	Fixed &	operator=( Fixed const & rhs );
+
+
+private :
+
+	int					_Integer;
+	static const int	_Bits;
+};
+
+std::ostream &	operator<<( std::ostream & o, Fixed const & rhs );
+
+#endif
