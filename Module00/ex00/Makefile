@@ -1,4 +1,4 @@
-NAME		= megaphone
+NAME		= Megaphone
 SRCSC		= megaphone.cpp
 SRCSH		= 
 OBJS		= $(SRCSC:%.cpp=%.o)
@@ -20,7 +20,7 @@ $(NAME):	${OBJS} ${SRCSH}
 
 run:
 			@make
-			@./megaphone
+			@./${NAME}
 
 clean:
 			@rm -f ${OBJS}

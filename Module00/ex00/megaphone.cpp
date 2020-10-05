@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 15:16:06 by user42            #+#    #+#             */
-/*   Updated: 2020/09/28 11:35:55 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/01 13:20:22 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int main(int argc, char **argv)
 			while(argv[i][++j])
 			{
 				argv[i][j] = toupper(argv[i][j]);
-				std::cout<< argv[i][j];
+				std::cout << argv[i][j];
 			}
 		}
-		std::cout<<std::endl;
+		std::cout << std::endl;
 	}
 	return (0);
 }

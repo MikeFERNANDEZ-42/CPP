@@ -6,11 +6,11 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 15:29:19 by user42            #+#    #+#             */
-/*   Updated: 2020/09/29 13:04:52 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/01 21:04:07 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contacts.class.hpp"
+#include "Contacts.hpp"
 
 int		ft_verif_id(std::string id_search, int nb_contacts, int *id_finded)
 {
