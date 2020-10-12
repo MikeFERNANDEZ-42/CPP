@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/23 19:09:57 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 11:45:59 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/05 13:06:55 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ponyOnTheHeap(void)
 	delete (Jordan);
 }
 
-int	main(int argc, char **argv, char **env)
+int	main(void)
 {
 	ponyOnTheStack();
 	std::cout << std::endl << "--------------------" << std::endl << std::endl;

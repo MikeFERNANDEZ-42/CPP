@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/23 19:01:40 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 12:00:51 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/01 21:16:57 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 Pony::Pony(std::string pName,std::string pCol, std::string pRace, float pSize,
 float pWeight, std::string pFav, std::string pBest)
-: _Name(pName)
-, _Color(pCol)
-, _Race(pRace)
-, _Size(pSize)
-, _Weight(pWeight)
-, _FavoriteToy(pFav)
-, _BestFriend(pBest)
 {
+	this->_Name = pName;
+	this->_Color = pCol;
+	this->_Race = pRace;
+	this->_Size = pSize;
+	this->_Weight = pWeight;
+	this->_FavoriteToy = pFav;
+	this->_BestFriend = pBest;
 	std::cout << this->_Name << " created !" << std::endl << std::endl;
 }
 

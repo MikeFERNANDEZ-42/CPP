@@ -6,13 +6,13 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 11:52:39 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 16:55:02 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/05 13:21:53 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieEvent.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
 	int nbZombies;
 

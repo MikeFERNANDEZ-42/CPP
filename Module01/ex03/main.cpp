@@ -6,13 +6,13 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 11:52:39 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 18:21:50 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/05 13:34:17 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieHorde.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
 	int nbZombies;
 

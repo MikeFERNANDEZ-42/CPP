@@ -1,18 +1,18 @@
-NAME		= Horde
-SRCSC		= main.cpp Zombie.cpp ZombieHorde.cpp
+NAME		= Zombie
+SRCSC		= Zombie.cpp ZombieHorde.cpp main.cpp
 SRCSH		= 
 OBJS		= $(SRCSC:%.cpp=%.o)
 LIBS 		= 
-FLAGS		= -Wall -Wextra -Werror
-CC			= clang++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXX			= clang++
 
 all:		${NAME}
 
 .c.o: ${OBJS}
-	@clang++ ${FLAGS} -cpp $< -o ${<:.cpp=.o}
+	@${CXX} ${FLAGS} -cpp $< -o ${<:.cpp=.o}
 
 $(NAME):	${OBJS} ${SRCSH}
-			@${CC} ${FLAGS} ${OBJS} ${LIBS} -o ${NAME}
+			${CXX} ${CXXFLAGS} ${OBJS} ${LIBS} -o ${NAME}
 			@echo "\033[1;32m┌─┐┬ ┬┌─┐┌─┐┌─┐┌─┐┌─┐"
 			@echo 			"└─┐│ ││  │  ├┤ └─┐└─┐"
 			@echo 			"└─┘└─┘└─┘└─┘└─┘└─┘└─┘"
@@ -20,7 +20,7 @@ $(NAME):	${OBJS} ${SRCSH}
 
 run:
 			@make
-			@./Zombie
+			@./${NAME}
 
 clean:
 			@rm -f ${OBJS}

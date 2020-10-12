@@ -6,27 +6,27 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 18:42:34 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 21:11:42 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/05 17:40:43 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "Human.hpp"
 
 Human::Human()
 {
-	_brain = Brain();
 }
 
 Human::~Human()
 {
 }
 
-void	*Human::identify()
+const void *Human::identify() const
 {
-	return (this->_brain.identify());
+	return this->_brain.identify();
 }
 
-Brain	Human::getBrain()
+const Brain			&Human::getBrain() const
 {
-	return(this->_brain);
+	return this->_brain;
 }

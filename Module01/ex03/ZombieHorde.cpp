@@ -6,15 +6,27 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 11:53:53 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 19:35:02 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/05 13:33:58 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieHorde.hpp"
 
-ZombieHorde::ZombieHorde(int	pnbZombies) : _nbZombies(pnbZombies)
+ZombieHorde::ZombieHorde(int	pnbZombies)
 {
-	std::cout << "The ZombieParty is created !" << std::endl << std::endl;;
+	std::string ptypes[10] = {"Nostalgique", "Négligé",
+	"Sans yeux", "Moustachu", "Publicitaire", "Pacifiste",
+	"Colossale", "Magicien", "Nageur", "Flibustier"};	
+	std::string pnames[10] = {"Gustave", "Steve", "Cunégond",
+	"Charles-Antoine", "Elisabeth", "Brittany", "Pascal",
+	"Dimitri", "Chantal", "Dominique"};
+	
+	std::cout << "The ZombieParty is created !" << std::endl << std::endl;
+	this-> _nbZombies = pnbZombies;
+	for (int i = 0; i < 10; i++)
+		this->_types[i] = ptypes[i];
+	for (int i = 0; i < 10; i++)
+		this->_names[i] = pnames[i];
 	srand(time(NULL));
 	CreateParty();
 }
@@ -58,5 +70,6 @@ void	ZombieHorde::CreateParty(void)
 
 void	ZombieHorde::announce()
 {
-	this->announce();
+	 for (int i = 0; i < _nbZombies; i++)
+        _Zombies[i]->announce();
 }

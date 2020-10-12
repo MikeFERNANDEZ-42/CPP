@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 13:36:39 by user42            #+#    #+#             */
-/*   Updated: 2020/09/25 21:24:42 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/05 18:45:54 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 std::string toupperStr(std::string str)
 {
-	for (int i = 0; i < str.length(); i++)
+	for (size_t i = 0; i < str.length(); i++)
 		str[i] = toupper(str[i]);
 	return (str);
 }
 
 std::string replaceStr(std::string line, std::string s1, std::string s2)
 {
-    int i = 0;
+    size_t i = 0;
 
     while ((i = line.find(s1, i)) < line.length())
 	{
@@ -33,14 +33,18 @@ std::string replaceStr(std::string line, std::string s1, std::string s2)
     return line;
 }
 
-int		replace(std::string filename, std::string s1, std::string s2)
+int		replace(const char *filename, std::string s1, std::string s2)
 {
 	std::ifstream	ifs(filename);
-	std::string		newName = toupperStr(filename).append(".replace");
+	if (s1.empty()  || s2.empty() || ifs.fail())
+		return (-1);
+	std::string		cpy = toupperStr(filename).append(".replace");
+	const char 		*newName;
+	newName = cpy.c_str();
 	std::ofstream	newFile(newName);
 	std::string		line;
 
-	if (s1.empty()  || s2.empty() || ifs.fail() || newFile.fail())
+	if (newFile.fail())
 		return (-1);
 	while (std::getline(ifs, line))
     	newFile << replaceStr(line, s1, s2) << "\n";
@@ -49,7 +53,7 @@ int		replace(std::string filename, std::string s1, std::string s2)
 	return (0);
 }
 
-int main(int argc, char **argv)
+int main(int argc, const char **argv)
 {
 	int ret;
 

@@ -1,5 +1,5 @@
-NAME		= FragTrap
-SRCSC		= main.cpp FragTrap.cpp
+NAME		= ScavTrap
+SRCSC		= main.cpp FragTrap.cpp ScavTrap.cpp
 SRCSH		= 
 OBJS		= $(SRCSC:%.cpp=%.o)
 LIBS 		= 

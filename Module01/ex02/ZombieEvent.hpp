@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 11:53:48 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 18:00:56 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/05 13:21:33 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ZOMBIEEVENT_H
 
 #include "Zombie.hpp"
+#include "stdlib.h"
 
 class	ZombieEvent {
 
@@ -30,14 +31,8 @@ public:
 private :
 
 		int	_nbZombies;
-
-		std::string _types[10] = {"Nostalgique", "Négligé",
-		"Sans yeux", "Moustachu", "Publicitaire", "Pacifiste",
-		"Colossale", "Magicien", "Nageur", "Flibustier"};
-
-		std::string _names[10] = {"Gustave", "Steve", "Cunégond",
-		"Charles-Antoine", "Elisabeth", "Brittany", "Pascal",
-		"Dimitri", "Chantal", "Dominique"};
+		std::string _types[10];
+		std::string _names[10];
 };
 
 #endif

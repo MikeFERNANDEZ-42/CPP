@@ -6,28 +6,26 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 18:42:37 by user42            #+#    #+#             */
-/*   Updated: 2020/09/24 21:12:22 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/05 17:47:09 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_H
-# define HUMAN_H
+#ifndef HUMAN_HPP
+#define HUMAN_HPP
 
-#include "Brain.hpp"
+# include "Brain.hpp"
 
-class	Human {
+class Human
+{
+	public:
+		Human(void);
+		~Human(void);
 
-public:
+		const void		*identify() const;
+		const Brain		&getBrain() const;
 
-	Human();
-	~Human();
-
-	void	*identify();
-	Brain getBrain();
-
-private :
-
-	Brain _brain;	
+	private:
+		const Brain		_brain;
 };
 
 #endif
