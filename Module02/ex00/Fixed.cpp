@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/26 15:34:48 by user42            #+#    #+#             */
-/*   Updated: 2020/10/08 20:22:15 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/27 11:32:12 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 const int Fixed::_Bits = 8;
 
-Fixed::Fixed( void )
+Fixed::Fixed( void ) : _Integer (0)
 {
-	this->_Integer = 0;
 	std::cout << "Default constructor called" << std::endl;
 }
 
